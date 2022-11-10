@@ -37,7 +37,6 @@ function ModelViewer() {
           environment-image="neutral"
           ar
           ar-modes="webxr scene-viewer quick-look"
-          //button
           ar-scale="auto"
           
           //ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"

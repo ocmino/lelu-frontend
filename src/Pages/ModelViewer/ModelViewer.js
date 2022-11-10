@@ -30,7 +30,6 @@ function ModelViewer() {
       <div className={styles.modelViewer}>
         <model-viewer
           src={hyperLink[index]}
-          alt="A 3D model of an astronaut"
           auto-rotate
           camera-controls
           shadow-intensity="1"
@@ -38,8 +37,12 @@ function ModelViewer() {
           environment-image="neutral"
           ar
           ar-modes="webxr scene-viewer quick-look"
+          //button
+          ar-scale="auto"
+          
+          //ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
         ></model-viewer>
-        <button className={styles.arButton} slot="ar-button" id="ar-button">View in your space</button>
+        {/* <button className={styles.arButton} slot="ar-button" id="ar-button">View in your space</button> */}
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.prevButton} onClick={nextModel}>

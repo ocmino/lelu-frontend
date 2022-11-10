@@ -24,6 +24,7 @@ function ModelViewer() {
   const prevModel = () => {
     setIndex(index - 1);
   };
+  //test
 
   return (
     <div className={styles.container}>

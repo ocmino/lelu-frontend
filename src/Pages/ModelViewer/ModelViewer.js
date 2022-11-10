@@ -21,10 +21,17 @@ function ModelViewer() {
   const [index, setIndex] = useState(0);
   const nextModel = () => {
     setIndex(index + 1);
+    if (index >= hyperLink.length - 1) {
+      setIndex(0);
+    }
   };
   const prevModel = () => {
     setIndex(index - 1);
+    if (index <= 0) {
+      setIndex(hyperLink.length - 1);
+    }
   };
+
 
   return (
     <div className={styles.container}>

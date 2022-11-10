@@ -8,7 +8,7 @@ function ModelViewer() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://lelu20221110133814.azurewebsites.net/model/getmodels")
+    fetch("http://lelu20221110133814.azurewebsites.net/model/getmodels")
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);

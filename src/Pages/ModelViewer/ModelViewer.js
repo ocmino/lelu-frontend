@@ -1,0 +1,57 @@
+//google model viewer component
+
+import React, { useState, useEffect } from "react";
+
+import styles from "./ModelViewer.module.css";
+
+function ModelViewer() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://localhost:7079/Model/GetModels")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, []);
+
+  //get all hyperLink from data
+  const hyperLink = data.map((item) => item.hyperLink);
+
+  //create a function that toggles through the hyperlinks
+  const [index, setIndex] = useState(0);
+  const nextModel = () => {
+    setIndex(index + 1);
+  };
+  const prevModel = () => {
+    setIndex(index - 1);
+  };
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.modelViewer}>
+        <model-viewer
+          src={hyperLink[index]}
+          alt="A 3D model of an astronaut"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          exposure="1"
+          environment-image="neutral"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+        ></model-viewer>
+        <button className={styles.arButton} slot="ar-button" id="ar-button">View in your space</button>
+      </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.prevButton} onClick={nextModel}>
+          Next
+        </button>
+        <button className={styles.nextButton} onClick={prevModel}>
+          Previous
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default ModelViewer;

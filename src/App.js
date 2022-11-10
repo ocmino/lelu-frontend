@@ -13,9 +13,9 @@ function App() {
       <div>
       <Router>
         <Routes>
-          <Route path="/" element={<StartPage />} />
+          <Route path="/startpage" element={<StartPage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/modelviewer" element={<ModelViewer />} />
+          <Route path="/" element={<ModelViewer />} />
           <Route path="/sqltable" element={<SqlTable />} />
         </Routes>
       </Router>

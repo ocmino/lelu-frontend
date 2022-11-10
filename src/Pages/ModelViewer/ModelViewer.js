@@ -9,7 +9,7 @@ function ModelViewer() {
 
   useEffect(() => {
     fetch("https://lelu20221110133814.azurewebsites.net/model/getmodels")
-      .then((res) => res.json())
+      .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
 

@@ -12,7 +12,6 @@ function ModelViewer() {
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
-  //Test
 
   //get all hyperLink from data
   const hyperLink = data.map((item) => item.hyperLink);
@@ -46,6 +45,7 @@ function ModelViewer() {
           ar
           ar-modes="webxr scene-viewer quick-look"
           ar-scale="auto"
+          autoplay
 
           //ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
         ></model-viewer>

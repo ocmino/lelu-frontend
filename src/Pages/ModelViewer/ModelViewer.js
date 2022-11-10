@@ -12,6 +12,7 @@ function ModelViewer() {
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
+  //Test
 
   //get all hyperLink from data
   const hyperLink = data.map((item) => item.hyperLink);

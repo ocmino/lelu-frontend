@@ -5,7 +5,7 @@ import Login from "./Pages/Login/Login";
 import SqlTable from "./Pages/Table/SqlTable";
 
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

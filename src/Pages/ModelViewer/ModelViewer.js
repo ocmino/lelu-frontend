@@ -38,7 +38,6 @@ function ModelViewer() {
           environment-image="neutral"
           ar
           ar-modes="webxr scene-viewer quick-look"
-          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
         ></model-viewer>
         <button className={styles.arButton} slot="ar-button" id="ar-button">View in your space</button>
       </div>

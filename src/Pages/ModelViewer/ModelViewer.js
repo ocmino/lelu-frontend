@@ -9,7 +9,7 @@ function ModelViewer() {
 
   useEffect(() => {
     fetch("https://lelu20221110133814.azurewebsites.net/model/getmodels")
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
 
@@ -24,7 +24,6 @@ function ModelViewer() {
   const prevModel = () => {
     setIndex(index - 1);
   };
-  //test
 
   return (
     <div className={styles.container}>
@@ -39,7 +38,7 @@ function ModelViewer() {
           ar
           ar-modes="webxr scene-viewer quick-look"
           ar-scale="auto"
-          
+
           //ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
         ></model-viewer>
         {/* <button className={styles.arButton} slot="ar-button" id="ar-button">View in your space</button> */}
